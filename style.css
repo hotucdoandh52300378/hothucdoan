@@ -1,0 +1,353 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Các biến màu dùng chung */
+:root {
+    --primary-red: #f01e1e;
+    --bg-light-gray: #f8f8f8;
+    --card-bg: #eaeaea;
+    --footer-bg: #555555;
+}
+
+/* Nút bấm chung */
+.btn-primary {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #cc0000;
+}
+
+/* =========================================
+   SẢN PHẨM NỔI BẬT (ĐÃ ÉP BẰNG NHAU)
+========================================= */
+.products {
+    padding: 50px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: "Times New Roman", serif;
+}
+
+/* KHUNG LƯỚI CHỨA 4 THẺ SẢN PHẨM */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch; /* Tuyệt chiêu 1: Ép 4 thẻ ngoài cùng phải dài bằng nhau */
+}
+
+/* TỪNG THẺ SẢN PHẨM */
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column; /* Xếp các nội dung từ trên xuống dưới */
+    align-items: center;
+}
+
+/* KHUNG TRẮNG CHỨA ẢNH - CHÌA KHÓA LÀ ĐÂY */
+.img-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    height: 160px; /* Tuyệt chiêu 2: Chốt cứng chiều cao khung trắng */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Căn ảnh nằm giữa khung theo chiều dọc */
+    justify-content: center; /* Căn ảnh nằm giữa khung theo chiều ngang */
+}
+
+.img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ép hình không bị lố ra ngoài, không bị méo */
+}
+
+/* ĐỊNH DẠNG CHỮ BÊN TRONG */
+.product-card .brand {
+    font-size: 12px;
+    color: #555;
+    font-weight: bold;
+}
+
+.product-card .name {
+    font-size: 14px;
+    margin: 5px 0;
+    font-family: "Times New Roman", serif;
+}
+
+.product-card .price {
+    color: var(--primary-red);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px; /* Tạo khoảng cách với nút */
+}
+
+/* NÚT MUA NGAY */
+.product-card .btn-primary {
+    margin-top: auto;
+    width: 90%; /* Cho nút rộng ra xíu nhìn sang hơn */
+}
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-area {
+    background-color: #274b6c;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.logo-area h1 {
+    font-style: italic;
+    font-size: 28px;
+}
+
+.logo-area p {
+    font-size: 12px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header-icons {
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* HERO BANNER */
+.hero {
+    background-color: var(--bg-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content .highlight {
+    color: var(--primary-red);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    max-width: 500px;
+}
+
+/* BANNER KHUYẾN MÃI */
+.promo-banner {
+    padding: 20px 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.promo-box {
+    background-color: #ffcccc; /* Màu nền hồng nhạt */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 30px 350px;
+    border: 1px solid #ff9999;
+}
+
+.promo-content h2 {
+    font-family: "Times New Roman", serif;
+    margin-bottom: 15px;
+}
+
+.promo-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.promo-image img {
+    max-width: 350px;
+    border-radius: 10px;
+}
+/* FOOTER */
+.footer {
+    background-color: var(--footer-bg);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    margin-top: 30px;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: white;
+}
+
+.promo-banner {
+    padding: 20px 50px 50px 50px;
+    display: flex;
+    justify-content: center; /* Căn giữa toàn bộ khối hồng ra giữa màn hình */
+}
+
+/* KHUNG MÀU HỒNG */
+.promo-box {
+    background-color: #ffcccc; 
+    border-radius: 15px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* Đẩy chữ qua trái, hình qua phải */
+    width: 90%; 
+    max-width: 900px; /* Giới hạn độ rộng để trên màn hình to không bị bè ra */
+    padding: 30px 40px;
+    border: 1px solid #ff9999;
+    box-sizing: border-box; /* Giúp padding không làm phình khung */
+    overflow: hidden; /* QUAN TRỌNG: Cắt đi phần hình ảnh lòi ra khỏi khung hồng */
+}
+
+/* CHỈNH KHỐI CHỮ (BÊN TRÁI) */
+.promo-content {
+    width: 50%; /* Ép khối chữ chỉ chiếm 40% diện tích */
+    padding-right: 20px;
+}
+
+.promo-content h2 {
+    font-family: "Times New Roman", serif; /* Chỉnh font chữ có chân cho sang giống hình mẫu */
+    font-size: 32px; /* Tăng cỡ chữ */
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.promo-content p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* CHỈNH KHỐI HÌNH VÀ HÌNH ẢNH (BÊN PHẢI) CHO ĂN KHỚP */
+.promo-image {
+    width: 55%; /* Ép khối hình chiếm 55% diện tích */
+}
+
+.promo-image img {
+    width: 100%; /* QUAN TRỌNG: Bắt buộc tấm hình phải co giãn vừa khít 100% cái khối 55% ở trên */
+    height: auto; /* Giữ nguyên tỉ lệ hình, không bị méo */
+    border-radius: 10px; /* Bo góc tấm hình một chút cho xịn */
+    display: block;
+}
+
+   /*PHẦN BANNER CHÍNH (HERO)*/
+
+.hero {
+    background-color: #f8f8f8; /* Nền xám nhạt */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*  chữ và hình ra 2 bên */
+    padding: 50px 80px; /* Tăng khoảng cách 2 bên lề để không bị sát mép màn hình */
+    gap: 30px; /* Khoảng cách giữa chữ và hình */
+}
+
+/* CHỈNH LẠI KHỐI CHỮ (BÊN TRÁI) */
+.hero-content {
+    flex: 1; /* Cho phép khối chữ co giãn linh hoạt */
+    min-width: 300px; /* Đảm bảo khối chữ không bị ép quá nhỏ */
+}
+
+.hero-content h1, 
+.hero-content h2:first-child { 
+    font-size: 38px; /* Ép cỡ chữ nhỏ lại cho cân bằng */
+    line-height: 1.3; /* Tăng khoảng cách giữa các dòng chữ cho thoáng */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero-content h2, 
+.hero-content h3.highlight {
+    font-size: 26px; /* Chỉnh nhỏ lại dòng giảm giá */
+    color: #e60000; /* Màu đỏ thẫm */
+    margin-bottom: 25px;
+}
+
+/* CHỈNH LẠI KHỐI HÌNH (BÊN PHẢI) */
+.hero-image {
+    flex: 1.2; /* Cho khối hình chiếm không gian nhỉnh hơn chữ một chút */
+    display: flex;
+    justify-content: flex-end; /* Ép hình sát về bên phải */
+}
+
+.hero-image img {
+    max-width: 100%; /* Đảm bảo hình không bị lố ra ngoài khung */
+    height: auto;
+}
